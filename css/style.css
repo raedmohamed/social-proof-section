@@ -1,0 +1,223 @@
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+}
+
+.testimonial {
+  min-height: 100vh;
+  background-image: url(../images/bg-pattern-top-desktop.svg),
+    url(../images/bg-pattern-bottom-desktop.svg);
+  background-position: left top, center bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto;
+}
+
+/* Default container style */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-block: 5.6rem;
+}
+
+.testimonial-head {
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+}
+.left-side {
+  width: 50%;
+}
+
+.left-side h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  letter-spacing: -2px;
+  color: var(--very-dark-magenta);
+}
+.left-side p {
+  width: 64%;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--dark-grayish-magenta);
+}
+.stars-container {
+  background-color: var(--light-grayish-magenta);
+  padding: 0.8rem 2rem;
+  max-width: 85%;
+}
+.stars-container:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.right-side {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.right-side .stars-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 9px;
+}
+.right-side .stars-container div {
+  display: flex;
+}
+.right-side .stars-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 9px;
+}
+.right-side .stars-container p {
+  font-weight: 600;
+  color: var(--very-dark-magenta);
+}
+.right-side .stars-container:first-child {
+  justify-self: flex-start;
+  align-self: flex-start;
+  margin-left: -50px;
+}
+.right-side .stars-container:nth-child(2) {
+  justify-self: center;
+}
+.right-side .stars-container:last-child {
+  margin-right: -50px;
+  align-self: flex-end;
+}
+
+.testimonial-body {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.user-card {
+  padding: 2rem 1rem;
+  background-color: var(--very-dark-magenta);
+  color: var(--white);
+  border-radius: 9px;
+}
+.user-card:nth-child(2) {
+  margin-top: 1rem;
+}
+.user-card:last-child {
+  margin-top: 2rem;
+}
+
+.user-card span {
+  display: block;
+}
+.user-card .card-head {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.user-card .card-head div:first-child {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-card .card-head div:first-child img {
+  max-width: 100%;
+}
+.user-card .card-head div span:first-child {
+  margin-bottom: 0.4rem;
+}
+.user-card .card-head div span:last-child {
+  color: var(--soft-pink);
+}
+.user-card p {
+  line-height: 1.4;
+}
+
+@media (max-width: 1439px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .testimonial {
+    min-height: 100vh;
+    background-image: url(../images/bg-pattern-top-desktop.svg),
+      url(../images/bg-pattern-bottom-mobile.svg);
+    background-position: top, center bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto;
+  }
+
+  .container {
+    padding: 3rem 2rem;
+  }
+  .testimonial-head {
+    flex-direction: column;
+    gap: 0;
+  }
+  .left-side {
+    text-align: center;
+    width: 100%;
+  }
+  .left-side p {
+    text-align: center;
+    line-height: 1.4;
+    width: 100%;
+  }
+
+  .right-side {
+    width: 100%;
+  }
+  .right-side .stars-container {
+    justify-self: center !important;
+    padding: 1rem;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    align-self: center !important;
+  }
+  .right-side .stars-container {
+    width: 100% !important;
+    flex-direction: column;
+
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .testimonial-body {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .testimonial-body .user-card {
+    margin: 0;
+  }
+}
